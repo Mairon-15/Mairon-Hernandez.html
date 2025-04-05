@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+	<title>Champions League</title>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="logo">
+				<h1 class="nombre-torneo">"Champions League" - Simulador</h1>
+
+		</header>
+
+		<div class="setup-panel" id="SetupPanel">
+			<h2>Modo del Torneo</h2>
+			<div class="format-selector">
+				<label for="FormatoDelTorneo">Formato del Torneo:</label>
+                <select id="FormatoDelTorneo">
+                    <option value="8">Cuartos de Final (8 equipos)</option>
+                    <option value="16">Octavos de Final (16 equipos)</option>
+                </select>
+		</div>
+		<div class="team-input">
+			<label for="NombreEquipo">Nombre del Equipo:</label>
+                <input type="text" id="NombreEquipo" placeholder="Ej: Real Madrid">
+                <button id="AggEquipoBtn">Añadir Equipo</button>
+			</div>
+
+		<div class="team-list-container">
+                <h3>Equipos Registrados (<span id="ConteoDeEquipos">0</span>/<span id="EquiposMax">8</span>)</h3>
+                <ul id="ListaDeEquipos"></ul>
+            </div>
+
+            <div class="action-buttons">
+                <button id="BtnIniciarTorneo" disabled>Iniciar Torneo</button>
+                <button id="BtnReiniciarEquipos">Reiniciar Equipos</button>
+            </div>
+        </div>
+
+        <div class="tournament-braket" id="TournamentBracket" style="display: none;">
+        	<div class="bracket-header">
+        		<h2>Llaves del Torneo</h2>
+        		<div class="bracket-actions">
+                    <button id="BtnBaraja"><i class="fas fa-random"></i> Ordenar Equipos</button>
+                    <button id="BtnSimular"><i class="fas fa-play"></i> Simular Encuentros</button>
+                    <button id="BtnReiniciarTorneo"><i class="fas fa-redo"></i> Reiniciar Todo</button>
+                </div>
+        	</div>
+
+        	<div class="bracket-container">
+                <!-- Las llaves se generarán dinámicamente con JavaScript -->
+            </div>
+
+            <div class="champion-container" id="ChampionContainer" style="display: none;">
+                <div class="champion-card">
+                    <h3>CAMPEÓN</h3>
+                    <div class="champion-name" id="ChampionName"></div>
+                    <i class="fas fa-trophy champion-trophy"></i>
+                </div>
+            </div>
+		</div>
+
+	<script src="js/script.js"></script>
+
+</body>
+</html>
